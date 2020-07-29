@@ -14,14 +14,13 @@ ActiveRecord::Schema.define(version: 2020_07_27_202021) do
 
   create_table "items", force: :cascade do |t|
     t.string "name"
+    t.string "brand"
     t.integer "cost"
     t.string "description"
-    t.integer "review_id"
   end
 
   create_table "purchases", force: :cascade do |t|
     t.integer "user_id"
-    t.integer "review_id"
     t.integer "item_id"
   end
 
@@ -33,7 +32,6 @@ ActiveRecord::Schema.define(version: 2020_07_27_202021) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
-    t.integer "review_id"
   end
 
 end
